@@ -6,9 +6,9 @@ No API keys needed. Works out of the box.
 
 INSTALL  (Windows)
 ------------------
-1. Install Python 3.10 or newer from https://www.python.org/downloads/
-   IMPORTANT: tick "Add Python to PATH" on the first screen of the installer.
-   This is the #1 thing people miss and it breaks everything.
+1. Install Python 3.12
+IMPORTANT: tick "Add Python to PATH" on the first screen of the installer.
+This is the #1 thing people miss and it breaks everything.
 
 2. Unzip this folder somewhere (Desktop is fine).
 
@@ -21,13 +21,6 @@ INSTALL  (Windows)
 4. Hover the top-middle edge of your screen (near the camera).
    The island appears.
 
-
-INSTALL  (macOS / Linux)
-------------------------
-1. Open Terminal in this folder.
-2. Run:    chmod +x run.sh && ./run.sh
-3. On Linux, also install playerctl for media support:
-       sudo apt install playerctl
 
 
 HOW TO USE
@@ -48,47 +41,6 @@ WHEN THE ISLAND APPEARS ON ITS OWN
 • Battery hits low, or charger plugged/unplugged
 
 
-TROUBLESHOOTING
----------------
-"Window opens then closes immediately":
-   You're using an old run.bat. Use the new one in this zip.
-   The new one stays open and shows you the error.
-
-"Python is not installed or not on PATH":
-   You skipped the "Add Python to PATH" tickbox.
-   Re-run the Python installer → choose Modify → tick "Add Python to PATH".
-
-"Could not install PyQt6 / Norton blocked it":
-   - Add this folder to Norton's exclusion list.
-   - Or right-click run.bat → Run as administrator.
-
-"keyboard failed to install":
-   This is fine. Norton often blocks the keyboard library because it can
-   read keystrokes (which is also why it's the only thing that lets us
-   register a global hotkey). It's a popular open-source library, not
-   malware, but Norton flags it sometimes. The island still works
-   without it - you just can't use Ctrl+Shift+Space to summon it.
-   Hover the top of your screen instead.
-
-Island appears in the wrong spot:
-   Open dynamic_island.py and edit the constants near the top:
-   PILL_W, PILL_H, EXPAND_W, EXPAND_H, TOP_MARGIN, HOTZONE_W.
-
-Linux media doesn't show:
-   sudo apt install playerctl
-
-
-AUTO-START ON LOGIN (Windows)
-------------------------------
-Press Win+R, type:   shell:startup
-Drag a SHORTCUT to run.bat into the folder that opens.
-(Right-click run.bat → Send to → Desktop, then move that shortcut.)
-
-
-API KEYS
---------
-None required. Everything works out of the box.
-
-• Weather:  uses wttr.in (free, no key, IP-located)
-• Media:    uses Windows' built-in SMTC API
-• System:   psutil reads CPU/RAM/battery/network locally
+Afterwords after run.bat is successful run run silent vbs and then install startub.bat
+this will make it launch everytime you log on.
+If you quit and want to run it again just open this folder and click run silent it will open it up for this instance.
